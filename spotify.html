@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="assets/ana.png">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Magic Playlist | Ana Clara</title>
+</head>
+
+<body>
+
+    <header id="topbar">
+
+        <h1 id="nameplate">
+            <a href="index.html">ana clara dos santos</a>
+        </h1>
+
+        <nav id="navbar">
+            <ul>
+                <li>
+                    <h2>
+                        <a href="index.html#work-section">work</a>
+                    </h2>
+                </li>
+
+                <li>
+                    <h2>
+                        <a href="index.html#skills-section">skills</a>
+                    </h2>
+                </li>
+
+                <li>
+                    <h2>
+                        <a href="index.html#courses-section">certifications</a>
+                    </h2>
+                </li>
+
+                <li>
+                    <h2>
+                        <a href="index.html#about-section">about</a>
+                    </h2>
+                </li>
+
+                <li>
+                    <h2>
+                        <a
+                            href="assets/resume.pdf"
+                            download="resume"
+                            target="_blank"
+                        >
+                            resume
+                        </a>
+                    </h2>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="work-page-content" id="temporary-height">
+
+        <!-- Cabeçalho -->
+
+        <div data-scroll class="work-page-header">
+
+            <h1 class="work-page-header-title">
+                Magic Playlist
+            </h1>
+
+            <img
+                class="up-next-image"
+                src="assets/magicplaylist/magicplaylist-card.png"
+                alt="Magic Playlist interface"
+            >
+
+            <h3 class="up-next-role">
+                Full-Stack Development / Spotify API
+            </h3>
+
+        </div>
+
+        <!-- Informações principais -->
+
+        <div
+            data-scroll
+            class="work-page-info-row skills-grey-boxes"
+        >
+
+            <h4>
+                <strong>TYPE:</strong>
+                Personal Project
+            </h4>
+
+            <h4>
+                <strong>CODE:</strong>
+                <a
+                    href="YOUR_GITHUB_REPOSITORY_LINK"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub
+                </a>
+            </h4>
+
+            <h4>
+                <strong>LIVE:</strong>
+                <a
+                    href="YOUR_LIVE_PROJECT_LINK"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Render
+                </a>
+            </h4>
+
+        </div>
+
+        <!-- Overview -->
+
+        <div data-scroll class="work-page-overview">
+
+            <h4 class="work-page-overview-content">
+                I built Magic Playlist to generate a new playlist from a single
+                reference song. The application searches the Spotify catalog,
+                creates a selection of related tracks, allows users to remove
+                songs or generate another version, and requests Spotify login
+                only when the user chooses to save the playlist.
+            </h4>
+
+        </div>
+
+        <!-- Methods and Tools -->
+
+        <div class="work-page-skills-main">
+
+            <div data-scroll class="work-page-skills">
+
+                <h2>Methods</h2>
+
+                <div class="skills-grey-boxes work-page-skills-boxes">
+                    <h4>API Integration</h4>
+                    <h4>OAuth Authentication</h4>
+                    <h4>Data Processing</h4>
+                    <h4>Dynamic Rendering</h4>
+                    <h4>Responsive Design</h4>
+                </div>
+
+            </div>
+
+            <div data-scroll class="work-page-skills">
+
+                <h2>Tools</h2>
+
+                <div class="skills-grey-boxes work-page-skills-boxes">
+                    <h4>Python</h4>
+                    <h4>Flask</h4>
+                    <h4>JavaScript</h4>
+                    <h4>Spotify Web API</h4>
+                    <h4>Requests</h4>
+                    <h4>Render</h4>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Technical Overview -->
+
+        <div class="work-page-section">
+
+            <h2
+                class="work-page-section-title underline magicplaylist-underline"
+            >
+                Technical Overview
+            </h2>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                Flask handles the server-side communication with Spotify and
+                protects the application credentials from being exposed in the browser.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                JavaScript sends search and generation requests to the Flask API,
+                renders the returned tracks, updates the interface, and manages
+                actions such as removing songs or generating a new version.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                Spotify authentication is only requested when the user wants to
+                save the generated playlist to their own account.
+            </h4>
+
+        </div>
+
+        <!-- Main Features -->
+
+        <div class="work-page-section">
+
+            <h2
+                class="work-page-section-title underline magicplaylist-underline"
+            >
+                Main Features
+            </h2>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Search for songs and artists in the Spotify catalog.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Select one track as the playlist reference.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Generate a collection of related tracks.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Display album covers, track names, artists, and Spotify links.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Remove unwanted tracks before saving.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Generate another playlist from the same reference song.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Save the final playlist as public or private on Spotify.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Responsive interface for desktop and mobile devices.
+            </h4>
+
+        </div>
+
+        <!-- Application Flow -->
+
+        <div class="work-page-section">
+
+            <h2
+                class="work-page-section-title underline magicplaylist-underline"
+            >
+                Application Flow
+            </h2>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                The user starts by searching for a song or artist and selecting
+                the most appropriate result from the Spotify catalog.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                The application sends the selected track to the Flask back end,
+                which retrieves related music data and returns a generated playlist.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                The user can review the result, remove individual tracks, or
+                generate a different version before choosing to save it.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                When the save action is selected, the user connects their Spotify
+                account and the application creates the playlist through the API.
+            </h4>
+
+        </div>
+
+        <!-- Challenges -->
+
+        <div class="work-page-section">
+
+            <h2
+                class="work-page-section-title underline magicplaylist-underline"
+            >
+                Challenges
+            </h2>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Protecting Spotify credentials while keeping the interface simple.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Connecting the JavaScript interface to the Flask API.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Handling Spotify authentication only when required.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Preventing duplicate tracks and keeping playlist results relevant.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Managing API errors, missing results, and interrupted login flows.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Preparing callback URLs and environment variables for deployment.
+            </h4>
+
+        </div>
+
+        <!-- What I Learned -->
+
+        <div class="work-page-section">
+
+            <h2
+                class="work-page-section-title underline magicplaylist-underline"
+            >
+                What I Learned
+            </h2>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • I improved my understanding of third-party API integration.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • I learned how OAuth connects an application to a user's account.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • I practiced processing JSON data returned by an external service.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • I gained experience separating public interface logic from
+                protected server-side credentials.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • I improved my ability to design asynchronous user flows with
+                loading, success, and error states.
+            </h4>
+
+        </div>
+
+        <!-- Galeria -->
+
+        <img
+            class="work-gallery desktop"
+            src="assets/magicplaylist/magicplaylist-gallery-desktop.png"
+            alt="Magic Playlist desktop interface"
+        >
+
+        <img
+            class="work-gallery mobile"
+            src="assets/magicplaylist/magicplaylist-gallery-mobile.png"
+            alt="Magic Playlist mobile interface"
+        >
+
+        <!-- Links finais -->
+
+        <h4 class="section-text magicplaylist-right right-text">
+            The source code is available on
+            <strong>
+                <a
+                    class="underline magicplaylist-underline"
+                    href="YOUR_GITHUB_REPOSITORY_LINK"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub
+                </a>
+            </strong>.
+
+            The application can be accessed through
+            <strong>
+                <a
+                    class="underline magicplaylist-underline"
+                    href="YOUR_LIVE_PROJECT_LINK"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Render
+                </a>
+            </strong>.
+        </h4>
+
+    </main>
+
+    <!-- Próximo projeto -->
+
+    <footer data-scroll class="up-next-section">
+
+        <a class="up-next" href="pathvisualizer.html">
+
+            <div class="up-next-label-gradient pathfinding-gradient">
+
+                <div class="up-next-label">
+                    <h2 class="up-next-text">up next</h2>
+                </div>
+
+            </div>
+
+            <div class="up-next-card-gradient pathfinding-gradient">
+
+                <div class="up-next-card">
+
+                    <h1 class="up-next-title">
+                        Pathfinding Visualizer
+                    </h1>
+
+                    <img
+                        class="up-next-image"
+                        src="assets/pathfinding/pathfinding-card.png"
+                        alt="Pathfinding Visualizer project"
+                    >
+
+                    <h3 class="up-next-role">
+                        JavaScript / Algorithms
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </a>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/velocity-animate@2.0/velocity.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://unpkg.com/splitting@1.0.0/dist/splitting.js"></script>
+    <script src="https://unpkg.com/scroll-out@2.2.3/dist/scroll-out.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

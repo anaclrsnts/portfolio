@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/ana.png">
+    <link rel="stylesheet" href="styles.css">
+    <title>Personal Finance Dashboard | Ana Clara</title>
+</head>
+<body>
+<header id="topbar">
+    <h1 id="nameplate"><a href="index.html">ana clara dos santos</a></h1>
+    <nav id="navbar">
+        <ul>
+            <li><h2><a href="index.html#work-section">work</a></h2></li>
+            <li><h2><a href="index.html#skills-section">skills</a></h2></li>
+            <li><h2><a href="index.html#courses-section">certifications</a></h2></li>
+            <li><h2><a href="index.html#about-section">about</a></h2></li>
+            <li><h2><a href="assets/resume.pdf" download="resume" target="_blank">resume</a></h2></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="work-page-content" id="temporary-height">
+    <div data-scroll class="work-page-header">
+        <h1 class="work-page-header-title">Personal Finance Dashboard</h1>
+        <img class="up-next-image" src="assets/finance/finance-card.png" alt="Personal Finance Dashboard interface">
+        <h3 class="up-next-role">Full-Stack Development / Python + JavaScript</h3>
+    </div>
+
+    <div data-scroll class="work-page-info-row skills-grey-boxes">
+        <h4><strong>TYPE:</strong> Personal Project</h4>
+        <h4><strong>CODE:</strong> <a href="https://github.com/anaclrsnts/personalfinance" target="_blank" rel="noopener noreferrer">GitHub</a></h4>
+        <h4><strong>LIVE:</strong> <a href="https://personalfinance-1-i5w3.onrender.com/" target="_blank" rel="noopener noreferrer">Render</a></h4>
+    </div>
+
+    <div data-scroll class="work-page-overview">
+        <h4 class="work-page-overview-content">
+            I built this personal finance dashboard to create a complete full-stack application for organizing income and expenses. The project combines a Flask back end, a SQLite database, and a JavaScript interface with filters, charts, transaction management, and CSV export.
+        </h4>
+    </div>
+
+    <div class="work-page-skills-main">
+        <div data-scroll class="work-page-skills">
+            <h2>Methods</h2>
+            <div class="skills-grey-boxes work-page-skills-boxes">
+                <h4>CRUD Operations</h4>
+                <h4>REST API</h4>
+                <h4>Data Validation</h4>
+                <h4>Responsive Design</h4>
+                <h4>Data Visualization</h4>
+            </div>
+        </div>
+        <div data-scroll class="work-page-skills">
+            <h2>Tools</h2>
+            <div class="skills-grey-boxes work-page-skills-boxes">
+                <h4>Python</h4>
+                <h4>Flask</h4>
+                <h4>SQLite</h4>
+                <h4>JavaScript</h4>
+                <h4>Chart.js</h4>
+                <h4>Render</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="work-page-section">
+        <h2 class="work-page-section-title underline finance-underline">Technical Overview</h2>
+        <h4 class="section-text finance-right right-text">Flask serves the application and exposes API routes for creating, reading, updating, and deleting financial transactions.</h4>
+        <h4 class="section-text finance-right right-text">SQLite stores each transaction with its description, value, type, category, date, notes, and creation timestamp.</h4>
+        <h4 class="section-text finance-right right-text">JavaScript consumes the API, updates the dashboard without page reloads, applies filters, manages the transaction modal, and renders charts with Chart.js.</h4>
+    </div>
+
+    <div class="work-page-section">
+        <h2 class="work-page-section-title underline finance-underline">Main Features</h2>
+        <h4 class="section-text finance-right right-text">• Registration of income and expense transactions.</h4>
+        <h4 class="section-text finance-right right-text">• Editing and deletion of existing transactions.</h4>
+        <h4 class="section-text finance-right right-text">• Automatic calculation of balance, total income, and total expenses.</h4>
+        <h4 class="section-text finance-right right-text">• Filtering by month, transaction type, category, and search text.</h4>
+        <h4 class="section-text finance-right right-text">• Monthly comparison chart for income and expenses.</h4>
+        <h4 class="section-text finance-right right-text">• Expense distribution chart organized by category.</h4>
+        <h4 class="section-text finance-right right-text">• CSV export and optional demonstration data.</h4>
+        <h4 class="section-text finance-right right-text">• Responsive interface deployed online with Render.</h4>
+    </div>
+
+    <div class="work-page-section">
+        <h2 class="work-page-section-title underline finance-underline">Application Flow</h2>
+        <h4 class="section-text finance-right right-text">When a transaction is submitted, JavaScript sends its data to the Flask API as JSON.</h4>
+        <h4 class="section-text finance-right right-text">Flask validates the information and stores it in SQLite before returning the saved transaction to the interface.</h4>
+        <h4 class="section-text finance-right right-text">The dashboard then reloads the transaction list, summary values, categories, and chart data so the interface remains synchronized with the database.</h4>
+    </div>
+
+    <div class="work-page-section">
+        <h2 class="work-page-section-title underline finance-underline">Challenges</h2>
+        <h4 class="section-text finance-right right-text">• Connecting the JavaScript interface to Flask API routes.</h4>
+        <h4 class="section-text finance-right right-text">• Keeping transaction lists, totals, filters, and charts synchronized.</h4>
+        <h4 class="section-text finance-right right-text">• Validating financial data before saving it to the database.</h4>
+        <h4 class="section-text finance-right right-text">• Managing modal behavior for both new and edited transactions.</h4>
+        <h4 class="section-text finance-right right-text">• Preparing the application for deployment with Gunicorn and Render.</h4>
+    </div>
+
+    <div class="work-page-section">
+        <h2 class="work-page-section-title underline finance-underline">What I Learned</h2>
+        <h4 class="section-text finance-right right-text">• I learned how Flask connects a browser interface to Python logic.</h4>
+        <h4 class="section-text finance-right right-text">• I improved my understanding of API routes and CRUD operations.</h4>
+        <h4 class="section-text finance-right right-text">• I practiced storing and retrieving structured data with SQLite.</h4>
+        <h4 class="section-text finance-right right-text">• I gained experience building dynamic charts from API data.</h4>
+        <h4 class="section-text finance-right right-text">• I learned how to prepare and deploy a Python web application online.</h4>
+    </div>
+
+    <img class="work-gallery desktop" src="assets/finance/finance-gallery-desktop.png" alt="Personal Finance Dashboard desktop interface">
+    <img class="work-gallery mobile" src="assets/finance/finance-gallery-mobile.png" alt="Personal Finance Dashboard mobile interface">
+
+    <h4 class="section-text finance-right right-text">
+        The source code is available on
+        <strong><a class="underline finance-underline" href="https://github.com/anaclrsnts/personalfinance" target="_blank" rel="noopener noreferrer">GitHub</a></strong>.
+        The application can be accessed through
+        <strong><a class="underline finance-underline" href="https://personalfinance-1-i5w3.onrender.com/" target="_blank" rel="noopener noreferrer">Render</a></strong>.
+    </h4>
+</main>
+
+<footer data-scroll class="up-next-section">
+    <a class="up-next" href="spotify.html">
+        <div class="up-next-label-gradient magicplaylist-gradient">
+            <div class="up-next-label"><h2 class="up-next-text">up next</h2></div>
+        </div>
+        <div class="up-next-card-gradient magicplaylist-gradient">
+            <div class="up-next-card">
+                <h1 class="up-next-title">Magic Playlist</h1>
+                <img class="up-next-image" src="assets/magicplaylist/magicplaylist-card.png" alt="Magic Playlist project">
+                <h3 class="up-next-role">Python + JavaScript / Spotify API</h3>
+            </div>
+        </div>
+    </a>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@2.0/velocity.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+<script src="https://unpkg.com/splitting@1.0.0/dist/splitting.js"></script>
+<script src="https://unpkg.com/scroll-out@2.2.3/dist/scroll-out.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
