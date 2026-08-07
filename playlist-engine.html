@@ -8,7 +8,7 @@
     <link rel="icon" href="assets/ana.png">
     <link rel="stylesheet" href="styles.css">
 
-    <title>Magic Playlist | Ana Clara</title>
+    <title>Playlist Engine | Ana Clara</title>
 </head>
 
 <body>
@@ -63,12 +63,12 @@
 
     <main class="work-page-content" id="temporary-height">
 
-        <!-- Cabeçalho -->
+        <!-- Header -->
 
         <div data-scroll class="work-page-header">
 
             <h1 class="work-page-header-title">
-                Magic Playlist
+                Playlist Engine
             </h1>
 
             <img
@@ -78,12 +78,12 @@
             >
 
             <h3 class="up-next-role">
-                Full-Stack Development / Spotify API
+                Music Recommendation / Audio Processing / Full-Stack
             </h3>
 
         </div>
 
-        <!-- Informações principais -->
+        <!-- Project information -->
 
         <div
             data-scroll
@@ -98,7 +98,7 @@
             <h4>
                 <strong>CODE:</strong>
                 <a
-                    href="YOUR_GITHUB_REPOSITORY_LINK"
+                    href="https://github.com/anaclrsnts/playlists"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -109,7 +109,7 @@
             <h4>
                 <strong>LIVE:</strong>
                 <a
-                    href="YOUR_LIVE_PROJECT_LINK"
+                    href="https://playlists-edi5.onrender.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -124,11 +124,20 @@
         <div data-scroll class="work-page-overview">
 
             <h4 class="work-page-overview-content">
-                I built Magic Playlist to generate a new playlist from a single
-                reference song. The application searches the Spotify catalog,
-                creates a selection of related tracks, allows users to remove
-                songs or generate another version, and requests Spotify login
-                only when the user chooses to save the playlist.
+                Playlist Engine started from a question that connects two parts of
+                my life: my interest in music and my studies in Electronic and
+                Computer Engineering. While studying signal processing — especially
+                audio signals — I became interested in what it would mean to describe
+                a song's "vibe" using measurable information instead of relying only
+                on genre or artist similarity.
+                <br><br>
+                The project grew from a simple Spotify-based playlist generator into
+                an experiment in music recommendation. A user chooses one reference
+                song and can decide whether similarity should be based on collective
+                listening patterns, sonic characteristics, or a combination of both.
+                The application then ranks candidate tracks, applies artist diversity,
+                lets the user listen to suggestions, refine the result, and save the
+                final playlist to Spotify.
             </h4>
 
         </div>
@@ -142,11 +151,12 @@
                 <h2>Methods</h2>
 
                 <div class="skills-grey-boxes work-page-skills-boxes">
-                    <h4>API Integration</h4>
+                    <h4>Music Recommendation</h4>
+                    <h4>Audio Feature Comparison</h4>
+                    <h4>Weighted Similarity</h4>
+                    <h4>Collaborative Listening Data</h4>
+                    <h4>Signal Processing Concepts</h4>
                     <h4>OAuth Authentication</h4>
-                    <h4>Data Processing</h4>
-                    <h4>Dynamic Rendering</h4>
-                    <h4>Responsive Design</h4>
                 </div>
 
             </div>
@@ -160,7 +170,8 @@
                     <h4>Flask</h4>
                     <h4>JavaScript</h4>
                     <h4>Spotify Web API</h4>
-                    <h4>Requests</h4>
+                    <h4>Last.fm API</h4>
+                    <h4>ReccoBeats</h4>
                     <h4>Render</h4>
                 </div>
 
@@ -179,19 +190,35 @@
             </h2>
 
             <h4 class="section-text magicplaylist-right right-text">
-                Flask handles the server-side communication with Spotify and
-                protects the application credentials from being exposed in the browser.
+                The recommendation system has three comparison modes:
+                <strong>Listening</strong>, <strong>Sound</strong>, and
+                <strong>Hybrid</strong>. Listening mode uses track-to-track listening
+                similarity to model the idea of "people who listen to this song also
+                listen to...". Sound mode focuses on musical characteristics such as
+                tempo, energy, valence, danceability, acousticness, and
+                instrumentalness.
             </h4>
 
             <h4 class="section-text magicplaylist-right right-text">
-                JavaScript sends search and generation requests to the Flask API,
-                renders the returned tracks, updates the interface, and manages
-                actions such as removing songs or generating a new version.
+                In Sound mode, the user can assign different weights to those
+                characteristics. Candidate songs are compared against the reference
+                track and receive a similarity score based on the selected priorities.
+                Tempo is treated carefully so half-time and double-time relationships
+                can still be considered rhythmically close.
             </h4>
 
             <h4 class="section-text magicplaylist-right right-text">
-                Spotify authentication is only requested when the user wants to
-                save the generated playlist to their own account.
+                Hybrid mode combines the listening-pattern score and the sound-profile
+                score into one weighted ranking. A second diversity step reduces
+                excessive repetition of the same artist, which helps the result feel
+                more like music discovery than a list of tracks from one catalog.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                Flask handles the recommendation logic, external API communication,
+                Spotify OAuth, token refresh, and playlist creation. JavaScript manages
+                the interactive comparison controls, loading states, recommendation
+                results, embedded listening player, and save flow.
             </h4>
 
         </div>
@@ -207,35 +234,44 @@
             </h2>
 
             <h4 class="section-text magicplaylist-right right-text">
-                • Search for songs and artists in the Spotify catalog.
+                • Search for a reference song using the Spotify catalog.
             </h4>
 
             <h4 class="section-text magicplaylist-right right-text">
-                • Select one track as the playlist reference.
+                • Choose between Listening, Sound, and Hybrid recommendation modes.
             </h4>
 
             <h4 class="section-text magicplaylist-right right-text">
-                • Generate a collection of related tracks.
+                • Adjust how much tempo, energy, mood, danceability, acousticness,
+                and instrumentalness matter to the sound comparison.
             </h4>
 
             <h4 class="section-text magicplaylist-right right-text">
-                • Display album covers, track names, artists, and Spotify links.
+                • Balance listening-pattern similarity against sonic similarity in
+                Hybrid mode.
             </h4>
 
             <h4 class="section-text magicplaylist-right right-text">
-                • Remove unwanted tracks before saving.
+                • Control artist diversity to move between more familiar and more
+                exploratory recommendations.
             </h4>
 
             <h4 class="section-text magicplaylist-right right-text">
-                • Generate another playlist from the same reference song.
+                • Display listening, sound, and overall match scores when available.
             </h4>
 
             <h4 class="section-text magicplaylist-right right-text">
-                • Save the final playlist as public or private on Spotify.
+                • Listen to suggested tracks through an embedded Spotify player.
             </h4>
 
             <h4 class="section-text magicplaylist-right right-text">
-                • Responsive interface for desktop and mobile devices.
+                • Remove unwanted tracks and regenerate the playlist with different
+                comparison settings.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Save the final result to Spotify with automatic session-token
+                refresh and playlist verification.
             </h4>
 
         </div>
@@ -251,23 +287,29 @@
             </h2>
 
             <h4 class="section-text magicplaylist-right right-text">
-                The user starts by searching for a song or artist and selecting
-                the most appropriate result from the Spotify catalog.
+                The user first chooses what "similar" should mean. They can prioritize
+                listening behavior, sonic characteristics, or combine the two. In the
+                sound-oriented modes, the comparison weights can be adjusted before
+                searching for a reference track.
             </h4>
 
             <h4 class="section-text magicplaylist-right right-text">
-                The application sends the selected track to the Flask back end,
-                which retrieves related music data and returns a generated playlist.
+                After the user selects a song, the comparison controls disappear and
+                the interface enters a loading state while candidate tracks are
+                collected, analyzed, ranked, and diversified.
             </h4>
 
             <h4 class="section-text magicplaylist-right right-text">
-                The user can review the result, remove individual tracks, or
-                generate a different version before choosing to save it.
+                The resulting playlist shows the reference track and ranked
+                recommendations. Each suggestion can be previewed through Spotify,
+                removed from the result, or inspected through its match scores.
             </h4>
 
             <h4 class="section-text magicplaylist-right right-text">
-                When the save action is selected, the user connects their Spotify
-                account and the application creates the playlist through the API.
+                Choosing "generate again" returns to the comparison controls so the
+                same seed can be explored with different assumptions. When the result
+                is ready, the user can connect Spotify and save the playlist directly
+                to their account.
             </h4>
 
         </div>
@@ -283,27 +325,33 @@
             </h2>
 
             <h4 class="section-text magicplaylist-right right-text">
-                • Protecting Spotify credentials while keeping the interface simple.
+                • Turning the subjective idea of a musical "vibe" into a set of
+                measurable and adjustable comparison criteria.
             </h4>
 
             <h4 class="section-text magicplaylist-right right-text">
-                • Connecting the JavaScript interface to the Flask API.
+                • Separating collaborative listening similarity from sonic similarity
+                instead of treating them as the same recommendation problem.
             </h4>
 
             <h4 class="section-text magicplaylist-right right-text">
-                • Handling Spotify authentication only when required.
+                • Combining several similarity dimensions without allowing one feature
+                — such as tempo or artist identity — to dominate every result.
             </h4>
 
             <h4 class="section-text magicplaylist-right right-text">
-                • Preventing duplicate tracks and keeping playlist results relevant.
+                • Designing artist-diversity rules that encourage discovery without
+                destroying the musical relationship to the seed track.
             </h4>
 
             <h4 class="section-text magicplaylist-right right-text">
-                • Managing API errors, missing results, and interrupted login flows.
+                • Coordinating multiple external services while giving users clear
+                loading, fallback, error, and authentication states.
             </h4>
 
             <h4 class="section-text magicplaylist-right right-text">
-                • Preparing callback URLs and environment variables for deployment.
+                • Managing Spotify OAuth, expiring access tokens, refresh tokens, and
+                verified playlist creation in a deployed Flask application.
             </h4>
 
         </div>
@@ -319,44 +367,84 @@
             </h2>
 
             <h4 class="section-text magicplaylist-right right-text">
-                • I improved my understanding of third-party API integration.
+                • This project helped me connect concepts from signal processing with
+                a full-stack application instead of studying them only as isolated
+                mathematical tools.
             </h4>
 
             <h4 class="section-text magicplaylist-right right-text">
-                • I learned how OAuth connects an application to a user's account.
+                • I became more interested in how audio can be represented through
+                descriptors such as tempo, energy, spectral and timbral information,
+                and how those measurements can support similarity systems.
             </h4>
 
             <h4 class="section-text magicplaylist-right right-text">
-                • I practiced processing JSON data returned by an external service.
+                • I learned that recommendation is not a single definition of
+                similarity: behavioral similarity and acoustic similarity can lead to
+                very different but equally meaningful results.
             </h4>
 
             <h4 class="section-text magicplaylist-right right-text">
-                • I gained experience separating public interface logic from
-                protected server-side credentials.
+                • I practiced building weighted ranking logic and designing an
+                interface that exposes those assumptions to the user instead of hiding
+                them inside the algorithm.
             </h4>
 
             <h4 class="section-text magicplaylist-right right-text">
-                • I improved my ability to design asynchronous user flows with
-                loading, success, and error states.
+                • I also strengthened my understanding of Flask APIs, asynchronous
+                JavaScript flows, OAuth, deployment, external-service failures, and
+                stateful user interactions.
             </h4>
 
         </div>
 
-        <!-- Galeria -->
+
+        <!-- Motivation -->
+
+        <div class="work-page-section">
+
+            <h2
+                class="work-page-section-title underline magicplaylist-underline"
+            >
+                Why This Project Matters to Me
+            </h2>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                I am especially interested in this project because it sits directly
+                between software development and my engineering studies. Music has
+                always been one of my strongest personal interests, and studying signal
+                processing made me want to understand music not only as something I
+                listen to, but also as a signal that can be measured, represented, and
+                compared.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                Playlist Engine gives me a practical space to explore that connection.
+                My next goal is to keep pushing the sound-comparison side further,
+                especially with audio-processing techniques such as spectral
+                descriptors, chroma, MFCCs, and similarity between feature vectors.
+                For me, the project is less about recreating a commercial recommender
+                and more about learning how engineering concepts can shape a playful,
+                useful music experience.
+            </h4>
+
+        </div>
+
+        <!-- Gallery -->
 
         <img
             class="work-gallery desktop"
             src="assets/magicplaylist/playlist-desktop.png"
-            alt="Magic Playlist desktop interface"
+            alt="Playlist Engine desktop interface"
         >
 
         <img
             class="work-gallery mobile"
             src="assets/magicplaylist/playlist-desktop.png"
-            alt="Magic Playlist mobile interface"
+            alt="Playlist Engine mobile interface"
         >
 
-        <!-- Links finais -->
+        <!-- Final links -->
 
         <h4 class="section-text magicplaylist-right right-text">
             The source code is available on
@@ -386,7 +474,7 @@
 
     </main>
 
-    <!-- Próximo projeto -->
+    <!-- Next project -->
 
     <footer data-scroll class="up-next-section">
 
