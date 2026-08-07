@@ -63,7 +63,7 @@
 
     <main class="work-page-content" id="temporary-height">
 
-        <!-- Cabeçalho -->
+        <!-- Header -->
 
         <div data-scroll class="work-page-header">
 
@@ -83,7 +83,7 @@
 
         </div>
 
-        <!-- Informações principais -->
+        <!-- Main information -->
 
         <div
             data-scroll
@@ -98,22 +98,11 @@
             <h4>
                 <strong>CODE:</strong>
                 <a
-                    href="SEU_LINK_DO_GITHUB"
+                    href="https://github.com/anaclrsnts/pathvisualizer"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
                     GitHub
-                </a>
-            </h4>
-
-            <h4>
-                <strong>LIVE:</strong>
-                <a
-                    href="SEU_LINK_DO_GITHUB_PAGES"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    GitHub Pages
                 </a>
             </h4>
 
@@ -124,7 +113,11 @@
         <div data-scroll class="work-page-overview">
 
             <h4 class="work-page-overview-content">
-                This interactive pathfinding visualizer demonstrates how different search algorithms explore a grid to find the shortest path between two points. Users can draw walls, move the start and end nodes, compare algorithms, and watch every step through smooth animations.
+                Pathfinding Visualizer is an interactive grid-based project built with
+                vanilla HTML, CSS, and JavaScript. It lets users create walls, drag the
+                start and destination nodes, choose between Breadth-First Search,
+                Dijkstra, and A*, and watch each algorithm explore the grid before
+                highlighting the final path.
             </h4>
 
         </div>
@@ -135,14 +128,15 @@
 
             <div data-scroll class="work-page-skills">
 
-                <h2>Methods</h2>
+                <h2>Concepts</h2>
 
                 <div class="skills-grey-boxes work-page-skills-boxes">
-                    <h4>Graph Algorithms</h4>
+                    <h4>Graph Traversal</h4>
+                    <h4>BFS</h4>
+                    <h4>Dijkstra</h4>
+                    <h4>A*</h4>
+                    <h4>Manhattan Heuristic</h4>
                     <h4>DOM Manipulation</h4>
-                    <h4>Algorithm Visualization</h4>
-                    <h4>State Management</h4>
-                    <h4>Pathfinding</h4>
                 </div>
 
             </div>
@@ -156,7 +150,7 @@
                     <h4>CSS</h4>
                     <h4>JavaScript</h4>
                     <h4>Git</h4>
-                    <h4>GitHub Pages</h4>
+                    <h4>GitHub</h4>
                 </div>
 
             </div>
@@ -174,20 +168,29 @@
             </h2>
 
             <h4 class="section-text pathfinding-right right-text">
-                The application uses a collection of image objects to create a
-                4 × 4 memory board. Eight items are randomly selected, duplicated
-                to form matching pairs, shuffled, and then added to the page dynamically.
+                The application generates a 20 × 12 interactive grid in JavaScript.
+                Each cell is represented as a node that stores its coordinates and
+                current state, including whether it is a wall, the start node, the
+                destination node, or part of the search result.
             </h4>
 
             <h4 class="section-text pathfinding-right right-text">
-                JavaScript controls the card-selection flow, stores the first and
-                second selected cards, compares their values, updates the move counter,
-                manages the timer, and verifies the final win condition.
+                The visualizer implements Breadth-First Search, Dijkstra's algorithm,
+                and A*. All three algorithms explore neighboring cells while ignoring
+                walls and store a reference to the previous node so the final route can
+                be reconstructed after the destination is reached.
             </h4>
 
             <h4 class="section-text pathfinding-right right-text">
-                The interface is updated through DOM manipulation and CSS classes,
-                without the use of a front-end framework.
+                A* also calculates the Manhattan distance between each node and the
+                destination, combining the traveled distance with this heuristic to
+                prioritize which nodes should be explored next.
+            </h4>
+
+            <h4 class="section-text pathfinding-right right-text">
+                The search process is animated directly through DOM updates and CSS
+                classes. Visited nodes appear progressively, followed by a separate
+                animation for the final path.
             </h4>
 
         </div>
@@ -203,35 +206,39 @@
             </h2>
 
             <h4 class="section-text pathfinding-right right-text">
-                • Dynamic generation of a 4 × 4 card grid.
+                • Interactive 20 × 12 grid.
             </h4>
 
             <h4 class="section-text pathfinding-right right-text">
-                • Random card selection and shuffling for each new game.
+                • Click-and-drag wall creation and removal.
             </h4>
 
             <h4 class="section-text pathfinding-right right-text">
-                • Interactive card-flip behavior.
+                • Draggable start and destination nodes.
             </h4>
 
             <h4 class="section-text pathfinding-right right-text">
-                • Automatic comparison and detection of matching pairs.
+                • Breadth-First Search visualization.
             </h4>
 
             <h4 class="section-text pathfinding-right right-text">
-                • Move counter updated after each pair selection.
+                • Dijkstra's algorithm visualization.
             </h4>
 
             <h4 class="section-text pathfinding-right right-text">
-                • Timer that tracks the duration of the game.
+                • A* visualization using Manhattan distance as its heuristic.
             </h4>
 
             <h4 class="section-text pathfinding-right right-text">
-                • Start and stop controls for managing the game session.
+                • Separate animations for explored nodes and the final path.
             </h4>
 
             <h4 class="section-text pathfinding-right right-text">
-                • Win message displaying the player's final number of moves.
+                • Controls for clearing only the path or resetting the entire grid.
+            </h4>
+
+            <h4 class="section-text pathfinding-right right-text">
+                • Responsive interface for different screen sizes.
             </h4>
 
         </div>
@@ -247,19 +254,23 @@
             </h2>
 
             <h4 class="section-text pathfinding-right right-text">
-                When the player starts a new game, the timer and move counter are reset,
-                the cards are randomly generated, and the game board becomes visible.
+                The user first edits the grid by drawing walls and, if desired,
+                repositioning the start and destination nodes. The chosen algorithm
+                can then be selected from the toolbar.
             </h4>
 
             <h4 class="section-text pathfinding-right right-text">
-                The player selects two cards at a time. If the cards match, they remain
-                visible and are marked as completed. If they do not match, they are
-                flipped back after a short delay.
+                When visualization begins, the previous search state is cleared while
+                the walls remain intact. The selected algorithm returns the nodes it
+                visited and reconstructs the path from the destination back to the
+                starting point.
             </h4>
 
             <h4 class="section-text pathfinding-right right-text">
-                The game ends when all card pairs have been found, and the final move
-                count is displayed to the player.
+                The interface then animates each visited node in sequence. If a route
+                exists, the final path is animated afterward and the number of steps is
+                displayed. If no route is possible, the interface reports that no path
+                was found.
             </h4>
 
         </div>
@@ -275,24 +286,29 @@
             </h2>
 
             <h4 class="section-text pathfinding-right right-text">
-                • Generating card pairs dynamically while ensuring that each selected
-                item appeared exactly twice.
+                • Representing the visual grid as JavaScript node objects while keeping
+                the interface synchronized with each node's state.
             </h4>
 
             <h4 class="section-text pathfinding-right right-text">
-                • Keeping track of the first and second selected cards during each turn.
+                • Implementing three algorithms with different search strategies while
+                using the same grid and path reconstruction logic.
             </h4>
 
             <h4 class="section-text pathfinding-right right-text">
-                • Synchronizing the card state, move counter, timer, and win condition.
+                • Managing drag interactions for walls and the start/end nodes without
+                allowing invalid states.
             </h4>
 
             <h4 class="section-text pathfinding-right right-text">
-                • Managing the delay before unmatched cards were flipped back over.
+                • Preserving walls when clearing a completed search while still
+                resetting distances, heuristic values, visited states, and previous-node
+                references.
             </h4>
 
             <h4 class="section-text pathfinding-right right-text">
-                • Updating the interface dynamically without using a framework.
+                • Coordinating asynchronous animations while temporarily disabling the
+                controls to prevent conflicting user actions.
             </h4>
 
         </div>
@@ -308,51 +324,86 @@
             </h2>
 
             <h4 class="section-text pathfinding-right right-text">
-                • I improved my understanding of DOM manipulation and event listeners.
+                • I strengthened my understanding of graph traversal and shortest-path
+                algorithms by translating them into an interactive visual interface.
             </h4>
 
             <h4 class="section-text pathfinding-right right-text">
-                • I learned how to generate interface elements dynamically using JavaScript.
+                • I practiced implementing BFS with a queue, Dijkstra with distance
+                updates, and A* with a heuristic-based priority score.
             </h4>
 
             <h4 class="section-text pathfinding-right right-text">
-                • I practiced managing application state using variables and CSS classes.
+                • I gained more experience modeling application state with JavaScript
+                objects and keeping that state synchronized with DOM elements.
             </h4>
 
             <h4 class="section-text pathfinding-right right-text">
-                • I became more comfortable working with arrays, objects, timers,
-                functions, and conditional logic.
+                • I learned how to reconstruct a route through previous-node references
+                instead of storing every possible path during the search.
             </h4>
 
             <h4 class="section-text pathfinding-right right-text">
-                • I improved my debugging and problem-solving skills while connecting
-                the game logic to the visual interface.
+                • I improved my understanding of asynchronous UI animation and user
+                interaction management without relying on a front-end framework.
             </h4>
 
         </div>
 
-        <!-- Galeria -->
+        <!-- Future Improvements -->
+
+        <div class="work-page-section">
+
+            <h2
+                class="work-page-section-title underline pathfinding-underline"
+            >
+                Future Improvements
+            </h2>
+
+            <h4 class="section-text pathfinding-right right-text">
+                • Maze generation.
+            </h4>
+
+            <h4 class="section-text pathfinding-right right-text">
+                • Adjustable visualization speed.
+            </h4>
+
+            <h4 class="section-text pathfinding-right right-text">
+                • Depth-First Search and Greedy Best-First Search.
+            </h4>
+
+            <h4 class="section-text pathfinding-right right-text">
+                • Weighted cells and additional pathfinding scenarios.
+            </h4>
+
+            <h4 class="section-text pathfinding-right right-text">
+                • Execution statistics for comparing the algorithms.
+            </h4>
+
+        </div>
+
+        <!-- Gallery -->
 
         <img
             class="work-gallery desktop"
-            src="assets/pathfinding/pathfinding-gallery-desktop.png"
+            src="assets/pathfinding/path-desktop.png"
             alt="Pathfinding Visualizer desktop interface"
         >
 
         <img
             class="work-gallery mobile"
-            src="assets/pathfinding/pathfinding-gallery-mobile.png"
+            src="assets/pathfinding/path-desktop.png"
             alt="Pathfinding Visualizer mobile interface"
         >
 
-        <!-- Links finais -->
+        <!-- Final link -->
 
         <h4 class="section-text pathfinding-right right-text">
             The source code is available on
             <strong>
                 <a
                     class="underline pathfinding-underline"
-                    href="YOUR_GITHUB_LINK"
+                    href="https://github.com/anaclrsnts/pathvisualizer"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -360,22 +411,22 @@
                 </a>
             </strong>.
 
-            The game can be played through
+                        The application can be accessed through
             <strong>
                 <a
                     class="underline pathfinding-underline"
-                    href="YOUR_GITHUB_PAGES_LINK"
+                    href="https://anaclrsnts.github.io/pathvisualizer/"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    GitHub Pages
+                    Github Pages
                 </a>
             </strong>.
         </h4>
 
     </main>
 
-    <!-- Próximo projeto -->
+    <!-- Next project -->
 
     <footer data-scroll class="up-next-section">
 

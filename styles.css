@@ -636,9 +636,9 @@ section {
 
 .work-gallery {
     margin: 0;
-    object-fit: cover;
-    width: 100%;
-    padding: 5em 0em;
+    object-fit: fill;
+    width: 30%;
+    padding: 0em 33% ;
 }
 
 .desktop {
