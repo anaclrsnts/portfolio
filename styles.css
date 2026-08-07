@@ -551,7 +551,7 @@ section {
     margin: 3em 2em;
 }
 
-#polaroid-row, #art-row {
+#icon-row, #art-row {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -560,7 +560,7 @@ section {
     margin: 3em 2em;
 }
 
-#polaroid-row img {
+#icon-row img {
     width: 12.5%;
     margin: 0.5em;
 }
@@ -1225,13 +1225,13 @@ section {
         justify-content: flex-end;
         margin: auto;
     }
-    #polaroid-row img {
+    #icon-row img {
         width: 20%;
     }
-    #polaroid-row h4 {
+    #icon-row h4 {
         width: 30%;
     }
-    #polaroid-1, #polaroid-2 {
+    #icon-1, #icon-2 {
         display: none;
     }
 }
@@ -1430,10 +1430,10 @@ section {
         top: 0.5em;
         left: 0.5em;
     }
-    #polaroid-row img{
+    #icon-row img{
         width: 17.5%;
     }
-    #polaroid-row h4 {
+    #icon-row h4 {
         max-width: 40%;
     }
     .journey-maps-image {
@@ -1468,18 +1468,18 @@ section {
 }
 
 @media only screen and (max-width: 675px){
-    #polaroid-row img{
+    #icon-row img{
         width: 40%;
     }
-    #polaroid-row, #art-row {
+    #icon-row, #art-row {
         margin: 0em;
         justify-content: center;
     }
-    #polaroid-row h4, #art-row h4 {
+    #icon-row h4, #art-row h4 {
         width: 40%;
         margin: 1em;
     }
-    #polaroid-3, #polaroid-5 {
+    #icon-3, #icon-4 {
         display: none;
     }
 
@@ -1523,19 +1523,19 @@ section {
     .copyright-footer {
         justify-content: space-around;
     }
-    #polaroid-row, #art-row {
+    #icon-row, #art-row {
         flex-direction: column;
         flex-wrap: wrap;
     }
-    #polaroid-5 {
+    #icon-5 {
         display: flex;
     }
-    #polaroid-row h4, #art-row h4 {
+    #icon-row h4, #art-row h4 {
         margin: 1em;
         max-width: 80%;
         width: 80%;
     }
-    #polaroid-row img, #art-row img {
+    #icon-row img, #art-row img {
         margin: 1em;
         width: 80%;
     }
@@ -1674,4 +1674,123 @@ section {
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
-} 
+}
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+#about-section .about-content {
+    width: calc(100% - 4rem);
+    margin: 3rem auto;
+}
+
+/* mantém tudo lado a lado, seguindo a ordem do HTML */
+#about-section #polaroid-row,
+#about-section #art-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    width: 100%;
+    margin: 3rem 0;
+}
+
+/* imagens */
+#about-section #polaroid-row img,
+#about-section #art-row img {
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    max-width: 15%;
+    max-height: 260px;
+
+    object-fit: contain;
+
+    margin: 0;
+
+    flex-shrink: 1;
+}
+
+/* texto no meio */
+#about-section #polaroid-row h4,
+#about-section #art-row h4,
+#about-section .about-content h4 {
+    width: 30%;
+    max-width: 30%;
+
+    margin: 0;
+
+    flex-shrink: 0;
+
+    line-height: 1.6;
+}
+
+/* não deixa as regras antigas esconderem imagens */
+#about-section #polaroid-1,
+#about-section #polaroid-2,
+#about-section #polaroid-3,
+#about-section #polaroid-4,
+#about-section #polaroid-5 {
+    display: block;
+}
+
+
+/* tablet */
+@media only screen and (max-width: 900px) {
+
+    #about-section #polaroid-row,
+    #about-section #art-row {
+        gap: 1rem;
+    }
+
+    #about-section #polaroid-row img,
+    #about-section #art-row img {
+        max-width: 16%;
+        max-height: 200px;
+    }
+
+    #about-section #polaroid-row h4,
+    #about-section #art-row h4,
+    #about-section .about-content h4 {
+        width: 28%;
+        max-width: 28%;
+    }
+}
+
+
+/* celular */
+@media only screen and (max-width: 620px) {
+
+    #about-section .about-content {
+        width: calc(100% - 2rem);
+        margin: 2rem auto;
+    }
+
+    #about-section #polaroid-row,
+    #about-section #art-row {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    #about-section #polaroid-row img,
+    #about-section #art-row img {
+        width: auto;
+        max-width: 75%;
+        max-height: 240px;
+    }
+
+    #about-section #polaroid-row h4,
+    #about-section #art-row h4,
+    #about-section .about-content h4 {
+        width: 90%;
+        max-width: 90%;
+    }
+}
