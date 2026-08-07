@@ -635,7 +635,7 @@ section {
 }
 
 .work-gallery {
-    margin: 0;
+    margin: 2.5em;
     object-fit: fill;
     width: 30%;
     padding: 0em 33% ;
