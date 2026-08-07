@@ -215,10 +215,9 @@ section {
 }
 
 #work-content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2em;
 }
 
 .work-card-gradient {
@@ -1193,6 +1192,19 @@ section {
 
 #hamburger-nav {
     display: none;
+}
+/* tablet */
+@media (max-width: 1000px) {
+    #work-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* celular */
+@media (max-width: 600px) {
+    #work-content {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media only screen and (max-width: 1380px){
