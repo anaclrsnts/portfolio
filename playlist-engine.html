@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="assets/ana.png">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Playlist Engine | Ana Clara</title>
+</head>
+
+<body>
+
+    <header id="topbar">
+
+        <h1 id="nameplate">
+            <a href="index.html">ana clara dos santos</a>
+        </h1>
+
+        <nav id="navbar">
+            <ul>
+                <li>
+                    <h2>
+                        <a href="index.html#work-section">work</a>
+                    </h2>
+                </li>
+
+                <li>
+                    <h2>
+                        <a href="index.html#skills-section">skills</a>
+                    </h2>
+                </li>
+
+                <li>
+                    <h2>
+                        <a href="index.html#courses-section">certifications</a>
+                    </h2>
+                </li>
+
+                <li>
+                    <h2>
+                        <a href="index.html#about-section">about</a>
+                    </h2>
+                </li>
+
+                <li>
+                    <h2>
+                        <a
+                            href="assets/resume.pdf"
+                            download="resume"
+                            target="_blank"
+                        >
+                            resume
+                        </a>
+                    </h2>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="work-page-content" id="temporary-height">
+
+        <!-- Header -->
+
+        <div data-scroll class="work-page-header">
+
+            <h1 class="work-page-header-title">
+                Playlist Engine
+            </h1>
+
+            <img
+                class="up-next-image"
+                src="assets/magicplaylist/magicplaylist-card.png"
+                alt="Magic Playlist interface"
+            >
+
+            <h3 class="up-next-role">
+                Music Recommendation / Audio Processing / Full-Stack
+            </h3>
+
+        </div>
+
+        <!-- Project information -->
+
+        <div
+            data-scroll
+            class="work-page-info-row skills-grey-boxes"
+        >
+
+            <h4>
+                <strong>TYPE:</strong>
+                Personal Project
+            </h4>
+
+            <h4>
+                <strong>CODE:</strong>
+                <a
+                    href="https://github.com/anaclrsnts/playlists"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub
+                </a>
+            </h4>
+
+            <h4>
+                <strong>LIVE:</strong>
+                <a
+                    href="https://playlists-edi5.onrender.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Render
+                </a>
+            </h4>
+
+        </div>
+
+        <!-- Overview -->
+
+        <div data-scroll class="work-page-overview">
+
+            <h4 class="work-page-overview-content">
+                Playlist Engine started from a question that connects two parts of
+                my life: my interest in music and my studies in Electronic and
+                Computer Engineering. While studying signal processing — especially
+                audio signals — I became interested in what it would mean to describe
+                a song's "vibe" using measurable information instead of relying only
+                on genre or artist similarity.
+                <br><br>
+                The project grew from a simple Spotify-based playlist generator into
+                an experiment in music recommendation. A user chooses one reference
+                song and can decide whether similarity should be based on collective
+                listening patterns, sonic characteristics, or a combination of both.
+                The application then ranks candidate tracks, applies artist diversity,
+                lets the user listen to suggestions, refine the result, and save the
+                final playlist to Spotify.
+            </h4>
+
+        </div>
+
+        <!-- Methods and Tools -->
+
+        <div class="work-page-skills-main">
+
+            <div data-scroll class="work-page-skills">
+
+                <h2>Methods</h2>
+
+                <div class="skills-grey-boxes work-page-skills-boxes">
+                    <h4>Music Recommendation</h4>
+                    <h4>Audio Feature Comparison</h4>
+                    <h4>Weighted Similarity</h4>
+                    <h4>Collaborative Listening Data</h4>
+                    <h4>Signal Processing Concepts</h4>
+                    <h4>OAuth Authentication</h4>
+                </div>
+
+            </div>
+
+            <div data-scroll class="work-page-skills">
+
+                <h2>Tools</h2>
+
+                <div class="skills-grey-boxes work-page-skills-boxes">
+                    <h4>Python</h4>
+                    <h4>Flask</h4>
+                    <h4>JavaScript</h4>
+                    <h4>Spotify Web API</h4>
+                    <h4>Last.fm API</h4>
+                    <h4>ReccoBeats</h4>
+                    <h4>Render</h4>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Technical Overview -->
+
+        <div class="work-page-section">
+
+            <h2
+                class="work-page-section-title underline magicplaylist-underline"
+            >
+                Technical Overview
+            </h2>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                The recommendation system has three comparison modes:
+                <strong>Listening</strong>, <strong>Sound</strong>, and
+                <strong>Hybrid</strong>. Listening mode uses track-to-track listening
+                similarity to model the idea of "people who listen to this song also
+                listen to...". Sound mode focuses on musical characteristics such as
+                tempo, energy, valence, danceability, acousticness, and
+                instrumentalness.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                In Sound mode, the user can assign different weights to those
+                characteristics. Candidate songs are compared against the reference
+                track and receive a similarity score based on the selected priorities.
+                Tempo is treated carefully so half-time and double-time relationships
+                can still be considered rhythmically close.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                Hybrid mode combines the listening-pattern score and the sound-profile
+                score into one weighted ranking. A second diversity step reduces
+                excessive repetition of the same artist, which helps the result feel
+                more like music discovery than a list of tracks from one catalog.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                Flask handles the recommendation logic, external API communication,
+                Spotify OAuth, token refresh, and playlist creation. JavaScript manages
+                the interactive comparison controls, loading states, recommendation
+                results, embedded listening player, and save flow.
+            </h4>
+
+        </div>
+
+        <!-- Main Features -->
+
+        <div class="work-page-section">
+
+            <h2
+                class="work-page-section-title underline magicplaylist-underline"
+            >
+                Main Features
+            </h2>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Search for a reference song using the Spotify catalog.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Choose between Listening, Sound, and Hybrid recommendation modes.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Adjust how much tempo, energy, mood, danceability, acousticness,
+                and instrumentalness matter to the sound comparison.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Balance listening-pattern similarity against sonic similarity in
+                Hybrid mode.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Control artist diversity to move between more familiar and more
+                exploratory recommendations.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Display listening, sound, and overall match scores when available.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Listen to suggested tracks through an embedded Spotify player.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Remove unwanted tracks and regenerate the playlist with different
+                comparison settings.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Save the final result to Spotify with automatic session-token
+                refresh and playlist verification.
+            </h4>
+
+        </div>
+
+        <!-- Application Flow -->
+
+        <div class="work-page-section">
+
+            <h2
+                class="work-page-section-title underline magicplaylist-underline"
+            >
+                Application Flow
+            </h2>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                The user first chooses what "similar" should mean. They can prioritize
+                listening behavior, sonic characteristics, or combine the two. In the
+                sound-oriented modes, the comparison weights can be adjusted before
+                searching for a reference track.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                After the user selects a song, the comparison controls disappear and
+                the interface enters a loading state while candidate tracks are
+                collected, analyzed, ranked, and diversified.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                The resulting playlist shows the reference track and ranked
+                recommendations. Each suggestion can be previewed through Spotify,
+                removed from the result, or inspected through its match scores.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                Choosing "generate again" returns to the comparison controls so the
+                same seed can be explored with different assumptions. When the result
+                is ready, the user can connect Spotify and save the playlist directly
+                to their account.
+            </h4>
+
+        </div>
+
+        <!-- Challenges -->
+
+        <div class="work-page-section">
+
+            <h2
+                class="work-page-section-title underline magicplaylist-underline"
+            >
+                Challenges
+            </h2>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Turning the subjective idea of a musical "vibe" into a set of
+                measurable and adjustable comparison criteria.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Separating collaborative listening similarity from sonic similarity
+                instead of treating them as the same recommendation problem.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Combining several similarity dimensions without allowing one feature
+                — such as tempo or artist identity — to dominate every result.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Designing artist-diversity rules that encourage discovery without
+                destroying the musical relationship to the seed track.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Coordinating multiple external services while giving users clear
+                loading, fallback, error, and authentication states.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • Managing Spotify OAuth, expiring access tokens, refresh tokens, and
+                verified playlist creation in a deployed Flask application.
+            </h4>
+
+        </div>
+
+        <!-- What I Learned -->
+
+        <div class="work-page-section">
+
+            <h2
+                class="work-page-section-title underline magicplaylist-underline"
+            >
+                What I Learned
+            </h2>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • This project helped me connect concepts from signal processing with
+                a full-stack application instead of studying them only as isolated
+                mathematical tools.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • I became more interested in how audio can be represented through
+                descriptors such as tempo, energy, spectral and timbral information,
+                and how those measurements can support similarity systems.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • I learned that recommendation is not a single definition of
+                similarity: behavioral similarity and acoustic similarity can lead to
+                very different but equally meaningful results.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • I practiced building weighted ranking logic and designing an
+                interface that exposes those assumptions to the user instead of hiding
+                them inside the algorithm.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                • I also strengthened my understanding of Flask APIs, asynchronous
+                JavaScript flows, OAuth, deployment, external-service failures, and
+                stateful user interactions.
+            </h4>
+
+        </div>
+
+
+        <!-- Motivation -->
+
+        <div class="work-page-section">
+
+            <h2
+                class="work-page-section-title underline magicplaylist-underline"
+            >
+                Why This Project Matters to Me
+            </h2>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                I am especially interested in this project because it sits directly
+                between software development and my engineering studies. Music has
+                always been one of my strongest personal interests, and studying signal
+                processing made me want to understand music not only as something I
+                listen to, but also as a signal that can be measured, represented, and
+                compared.
+            </h4>
+
+            <h4 class="section-text magicplaylist-right right-text">
+                Playlist Engine gives me a practical space to explore that connection.
+                My next goal is to keep pushing the sound-comparison side further,
+                especially with audio-processing techniques such as spectral
+                descriptors, chroma, MFCCs, and similarity between feature vectors.
+                For me, the project is less about recreating a commercial recommender
+                and more about learning how engineering concepts can shape a playful,
+                useful music experience.
+            </h4>
+
+        </div>
+
+        <!-- Gallery -->
+
+        <img
+            class="work-gallery desktop"
+            src="assets/magicplaylist/playlist-desktop.png"
+            alt="Playlist Engine desktop interface"
+        >
+
+        <img
+            class="work-gallery mobile"
+            src="assets/magicplaylist/playlist-desktop.png"
+            alt="Playlist Engine mobile interface"
+        >
+
+        <!-- Final links -->
+
+        <h4 class="section-text magicplaylist-right right-text">
+            The source code is available on
+            <strong>
+                <a
+                    class="underline magicplaylist-underline"
+                    href="https://github.com/anaclrsnts/playlists"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub
+                </a>
+            </strong>.
+
+            The application can be accessed through
+            <strong>
+                <a
+                    class="underline magicplaylist-underline"
+                    href="https://playlists-edi5.onrender.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Render
+                </a>
+            </strong>.
+        </h4>
+
+    </main>
+
+    <!-- Next project -->
+
+    <footer data-scroll class="up-next-section">
+
+        <a class="up-next" href="pathvisualizer.html">
+
+            <div class="up-next-label-gradient pathfinding-gradient">
+
+                <div class="up-next-label">
+                    <h2 class="up-next-text">up next</h2>
+                </div>
+
+            </div>
+
+            <div class="up-next-card-gradient pathfinding-gradient">
+
+                <div class="up-next-card">
+
+                    <h1 class="up-next-title">
+                        Pathfinding Visualizer
+                    </h1>
+
+                    <img
+                        class="up-next-image"
+                        src="assets/pathfinding/pathfinding-card.png"
+                        alt="Pathfinding Visualizer project"
+                    >
+
+                    <h3 class="up-next-role">
+                        JavaScript / Algorithms
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </a>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/velocity-animate@2.0/velocity.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://unpkg.com/splitting@1.0.0/dist/splitting.js"></script>
+    <script src="https://unpkg.com/scroll-out@2.2.3/dist/scroll-out.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
